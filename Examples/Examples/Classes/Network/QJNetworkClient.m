@@ -10,11 +10,11 @@
 @implementation SKHTTPSessionManager (NetworkClient)
 
 - (AnyPromise *)fetchFeeds:(NSDictionary *)parameters {
-  return [self pmk_GET:@"/posts" parameters:parameters];
+  return [self pmk_GET:@"/site/courseLis" parameters:parameters];
 }
 
 - (AnyPromise *)fetchFeedsWithPages:(NSDictionary *)parameters {
-  return [self pmk_GET:@"/posts/paginator" parameters:parameters];
+  return [self pmk_GET:@"/site/courseLis" parameters:parameters];
 }
 
 + (NSDictionary *)modelClassesByResourcePath {

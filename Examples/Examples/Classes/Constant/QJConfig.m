@@ -8,7 +8,7 @@
 
 @implementation QJConfig
 
-NSString *const kBaseURL = @"http://fakerapi.qiji.tech/";
+NSString *const kBaseURL = @"http://s2.d.jx-cloud.cc:10000/";
 NSString *const kAccept = @"application/vnd.fakerapi.v1.0+json";
 
 NSString *const kUmengAppKey = @"5784e374e0f55af78f003c53";

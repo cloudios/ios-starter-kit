@@ -31,8 +31,9 @@
       builder.paginateBlock = ^(NSDictionary *parameters) {
         @strongify(self)
         NSMutableDictionary *params = [parameters mutableCopy];
-        params[@"lat"] = @(1);
-        params[@"lng"] = @(1);
+        //params[@"lat"] = @(1);
+        //params[@"lng"] = @(1);
+        params[@"conditionPara"] = @"-----20-1";
         return [self.httpSessionManager fetchFeedsWithPages:[params copy]];
       };
     }];
