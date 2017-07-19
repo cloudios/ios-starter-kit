@@ -21,6 +21,7 @@
       @"X-Language-Code" : [SKLocalizableUtils getPreferredLanguagesString],
       @"X-Client-System" : [NSString stringWithFormat:@"%.1f", [[[UIDevice currentDevice] systemVersion] floatValue]],
       @"X-Client-Model" : [[UIDevice currentDevice] deviceModel],
+      @"X-JXC-APPID" : @"APP_ID",
   };
 }
 
