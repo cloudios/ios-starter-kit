@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SKAbstractTableViewController.h"
+//#import "SKHTTPAdapterManager.h"
 
 @class SKHTTPSessionManager;
 
@@ -18,7 +19,10 @@
 @property (copy, nonatomic, readonly) NSArray *localItems;
 
 @property(nonatomic, strong, readonly) SKHTTPSessionManager *httpSessionManager;
+//@property(nonatomic, strong, readonly) SKHTTPAdapterManager *httpAdapterManager;
 
 - (void)addLocalItems:(NSArray *)localItems;
+
+- (SKHTTPSessionManager *)httpSessionManagerInitWithParams:(NSDictionary *) params;
 
 @end

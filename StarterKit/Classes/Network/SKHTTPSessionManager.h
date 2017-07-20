@@ -9,4 +9,5 @@
 
 - (instancetype)init;
 
+- (instancetype)initWithParams:(NSDictionary *)parameters;
 @end

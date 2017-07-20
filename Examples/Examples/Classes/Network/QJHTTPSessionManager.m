@@ -13,6 +13,7 @@
 //  dispatch_once(&onceToken, ^{
 //    _sharedInstance = [MMHTTPSessionManager new];
 //  });
+   NSLog(@"--------------- QJHTTPSessionManager ");
   QJHTTPSessionManager *sharedInstance = [[QJHTTPSessionManager alloc] init];
   return sharedInstance;
 }

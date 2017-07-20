@@ -7,11 +7,10 @@ PODS:
   - AFNetworking/Security (3.1.0)
   - AFNetworking/Serialization (3.1.0)
   - AnimatedGIFImageSerialization (0.2.0)
-  - BFPaperButton (2.0.29):
-    - UIColor+BFPaperColors
-  - DGActivityIndicatorView (2.0)
+  - BFPaperButton (2.1.2)
+  - DGActivityIndicatorView (2.1.1)
   - DZNEmptyDataSet (1.7.3)
-  - FLEX (2.3.0)
+  - FLEX (2.4.0)
   - HexColors (3.0.0)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
@@ -53,7 +52,7 @@ PODS:
   - Mantle/extobjc (2.1.0)
   - Masonry (0.6.4)
   - MaterialControls (1.2.2)
-  - MBProgressHUD (0.9.2)
+  - MBProgressHUD (1.0.0)
   - MMPlaceHolder (1.9)
   - MTLManagedObjectAdapter (1.0.3):
     - Mantle (~> 2.0)
@@ -70,10 +69,10 @@ PODS:
   - Overcoat+PromiseKit (4.0.0-beta.2):
     - Overcoat (~> 4.0.0-beta.2)
     - PromiseKit/CorePromise (> 2)
-  - PromiseKit/CorePromise (4.1.7)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - PromiseKit/CorePromise (4.2.2)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - StarterKit (0.2.5):
     - AnimatedGIFImageSerialization (~> 0.2.0)
     - DGActivityIndicatorView
@@ -91,8 +90,7 @@ PODS:
     - Overcoat+PromiseKit (~> 4.0.0-beta.2)
     - SDWebImage (~> 3.7)
     - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
-  - UIColor+BFPaperColors (1.7.2)
-  - UITableView+FDTemplateLayoutCell (1.5.beta)
+  - UITableView+FDTemplateLayoutCell (1.6)
 
 DEPENDENCIES:
   - BFPaperButton
@@ -105,26 +103,25 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AnimatedGIFImageSerialization: b0f0cfe71eac1ee45a3d57ae533c23b8e6f29501
-  BFPaperButton: 7df738f2e749a9a4edd3e043f0621ee02215e417
-  DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
+  BFPaperButton: a25fdd3ff6898bdbd5cc9b1334ca36adb0296b9f
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
-  FLEX: ba80ea13d2c784e85e616137fd4eff164781e364
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   HexColors: 8b83e3fe90c0d466dae7b98c9d22da95799f99cb
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MaterialControls: 1c6b29e78d3a13d8dd6a67ed31b6d26eb5de8f72
-  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MMPlaceHolder: 40212b9dfe8760134b1b2fce3232f0d46200178f
   MTLManagedObjectAdapter: 631a53432675dcf03a9d90624afb3cececf54631
   Overcoat: 2ddaa6d66edebc375f3e24a37974631d5aff7ebe
   Overcoat+CoreData: b1561512e9686f52692e86d4d3eeb97a1c1d6249
   Overcoat+PromiseKit: 9f989a3d9bc8b07f576673be9bd85a3207399fbf
-  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   StarterKit: 3f5a1ec5b5f7e2565dc3b20a6053ada94ff959e2
-  UIColor+BFPaperColors: 03101fe6c10ed00c6daae7c26553f1de41500853
-  UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
 PODFILE CHECKSUM: c67f1bf8161546cad7a5b2980e09effb3a1d6a31
 

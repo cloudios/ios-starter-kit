@@ -11,6 +11,7 @@
 @property (copy, nonatomic) NSMutableArray *items;
 @property (copy, nonatomic) NSArray *localItems;
 @property(nonatomic, strong) SKHTTPSessionManager *httpSessionManager;
+//@property(nonatomic, strong) SKHTTPAdapterManager *httpAdapterManager;
 @end
 
 @implementation SKTableViewController
@@ -25,6 +26,13 @@
     _httpSessionManager = [SKHTTPSessionManager new];
   }
   return _httpSessionManager;
+}
+
+- (SKHTTPSessionManager *)httpSessionManagerInitWithParams:(NSDictionary *) params {
+    if (!_httpSessionManager) {
+        _httpSessionManager = [[SKHTTPSessionManager new]initWithParams:params];
+    }
+    return _httpSessionManager;
 }
 
 - (void)cancelAllRequests {

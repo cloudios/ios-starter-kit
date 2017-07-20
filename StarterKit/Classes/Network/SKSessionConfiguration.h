@@ -9,4 +9,6 @@
 
 + (NSURLSessionConfiguration *)defaultSessionConfiguration;
 
++ (NSURLSessionConfiguration *)defaultSessionConfigurationWithParams:(NSDictionary *)parameters;
+
 @end

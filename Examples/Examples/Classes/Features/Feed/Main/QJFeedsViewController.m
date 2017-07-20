@@ -25,14 +25,14 @@
       builder.cellMetadata = @[[QJFeedsTableViewCell class]];
       builder.modelOfClass = [QJPost class];
 
-      @weakify(self);
-      builder.paginateBlock = ^(NSDictionary *parameters) {
-        @strongify(self)
-        NSMutableDictionary *params = [parameters mutableCopy];
-        params[@"lat"] = @(1);
-        params[@"lng"] = @(1);
-        return [self.httpSessionManager fetchFeeds:[params copy]];
-      };
+//      @weakify(self);
+//      builder.paginateBlock = ^(NSDictionary *parameters) {
+//        @strongify(self)
+//        NSMutableDictionary *params = [parameters mutableCopy];
+//        params[@"lat"] = @(1);
+//        params[@"lng"] = @(1);
+//        return [self.httpSessionManager fetchFeeds:[params copy]];
+//      };
     }];
   }
   return self;

@@ -34,6 +34,9 @@
         //params[@"lat"] = @(1);
         //params[@"lng"] = @(1);
         params[@"conditionPara"] = @"-----20-1";
+        //self.httpSessionManager:[params copy];
+        NSLog(@"--------------- http 1");
+        [self httpSessionManagerInitWithParams:[params copy]];
         return [self.httpSessionManager fetchFeedsWithPages:[params copy]];
       };
     }];
