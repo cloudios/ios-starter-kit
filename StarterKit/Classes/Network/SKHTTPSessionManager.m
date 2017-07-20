@@ -9,6 +9,8 @@
 
 @implementation SKHTTPSessionManager
 
+//@synthesize params = _params;
+
 - (instancetype)init {
 
     //NSLog(@"---init base url %@",[NSURL URLWithString:[SKNetworkConfig sharedInstance].baseUrl]);
@@ -24,9 +26,10 @@
 - (instancetype)initWithParams:(NSDictionary *)parameters {
     NSLog(@"---initWithParams url %@",[NSURL URLWithString:[SKNetworkConfig sharedInstance].baseUrl]);
     if (self = [super initWithBaseURL:[NSURL URLWithString:[SKNetworkConfig sharedInstance].baseUrl]
-                 sessionConfiguration:[SKSessionConfiguration defaultSessionConfigurationWithParams:parameters]]) {
-        
+                 sessionConfiguration:[[SKSessionConfiguration new] defaultSessionConfigurationWithParams:parameters]]) {
+        _params = parameters;
     }
+    
     return self;
 }
 

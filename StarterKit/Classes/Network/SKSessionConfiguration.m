@@ -10,7 +10,14 @@
 #import "NSString+ExtUtils.h"
 
 #define SCAPI_APP_SECRET  @"APP_SECRET"
+
 @implementation SKSessionConfiguration
+
+- (instancetype)init {
+    if (self =[super init]) {
+    }
+    return self;
+}
 
 + (NSDictionary *)commonHeader {
   return @{
@@ -56,7 +63,7 @@
 }
 
 
-+ (NSURLSessionConfiguration *)defaultSessionConfigurationWithParams:(NSDictionary *)parameters{
+- (NSURLSessionConfiguration *)defaultSessionConfigurationWithParams:(NSDictionary *)parameters{
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSDictionary *headers = [[self class] commonHeader];

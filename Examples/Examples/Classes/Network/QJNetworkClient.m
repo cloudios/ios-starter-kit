@@ -10,33 +10,33 @@
 
 @implementation SKHTTPSessionManager (NetworkClient)
 
-- (AnyPromise *)fetchFeeds:(NSDictionary *)parameters {
-  NSLog(@"--------------- fetchFeeds ");
-  return [self pmk_GET:@"/site/courseLis" parameters:parameters];
-}
-
-- (AnyPromise *)fetchFeedsWithPages:(NSDictionary *)parameters {
-  NSLog(@"--------------- fetchFeedsWithPages ");
-  return [self pmk_GET:@"/site/courseLis" parameters:parameters];
-}
-
-
-
-//- (AnyPromise *)fetchFeedsNoParams {
+//- (AnyPromise *)fetchFeeds:(NSDictionary *)parameters {
 //  NSLog(@"--------------- fetchFeeds ");
-//  return [self pmk_GET:@"/site/courseLis" parameters: self.parametersDic];
+//  return [self pmk_GET:@"/site/courseLis" parameters:self.params];
 //}
 //
-//- (AnyPromise *)fetchFeedsWithPagesNoParams {
+//- (AnyPromise *)fetchFeedsWithPages:(NSDictionary *)parameters {
 //  NSLog(@"--------------- fetchFeedsWithPages ");
-//  return [self pmk_GET:@"/site/courseLis" parameters:self.parametersDic];
+//  return [self pmk_POST:@"/site/courseLis" parameters:self.params];
 //}
+
+
+
+- (AnyPromise *)fetchFeedsNoParams {
+  NSLog(@"--------------- fetchFeeds ");
+  return [self pmk_GET:@"/site/courseLis" parameters: self.params];
+}
+
+- (AnyPromise *)fetchFeedsWithPagesNoParams {
+  NSLog(@"--------------- fetchFeedsWithPages ");
+  return [self pmk_POST:@"/site/courseLis" parameters:self.params];
+}
 
 
 + (NSDictionary *)modelClassesByResourcePath {
   return @{
-      @"/posts/paginator" : [SKPaginatorModel class],
-      @"/posts" : [QJPost class],
+      @"/site/courseLis" : [SKPaginatorModel class],
+      @"/site/courseLis" : [QJPost class],
   };
 }
 

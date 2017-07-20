@@ -7,6 +7,8 @@
 
 @interface SKHTTPSessionManager : OVCHTTPSessionManager
 
+@property (nonatomic, strong) NSDictionary *params;
+
 - (instancetype)init;
 
 - (instancetype)initWithParams:(NSDictionary *)parameters;

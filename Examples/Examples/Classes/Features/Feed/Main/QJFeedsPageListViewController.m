@@ -22,14 +22,14 @@
       builder.modelOfClass = [QJPageListModel class];
       builder.customPageName = @"customPageName";
       builder.customPageSize = @"customPageSize";
-      //@weakify(self);
-//      builder.paginateBlock = ^(NSDictionary *parameters) {
-//        @strongify(self)
-//        NSMutableDictionary *params = [parameters mutableCopy];
-//        params[@"lat"] = @(1);
-//        params[@"lng"] = @(1);
-//        return [self.httpSessionManager fetchFeedsWithPages:[params copy]];
-//      };
+      @weakify(self);
+      builder.paginateBlock = ^(NSDictionary *parameters) {
+        @strongify(self)
+        NSMutableDictionary *params = [parameters mutableCopy];
+        params[@"lat"] = @(1);
+        params[@"lng"] = @(1);
+        return [[self httpSessionManagerInitWithParams:[params copy]] fetchFeedsWithPagesNoParams];
+      };
     }];
   }
   return self;

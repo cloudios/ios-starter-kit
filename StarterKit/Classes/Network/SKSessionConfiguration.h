@@ -7,8 +7,10 @@
 
 @interface SKSessionConfiguration : NSObject
 
+- (instancetype)init;
+
 + (NSURLSessionConfiguration *)defaultSessionConfiguration;
 
-+ (NSURLSessionConfiguration *)defaultSessionConfigurationWithParams:(NSDictionary *)parameters;
+- (NSURLSessionConfiguration *)defaultSessionConfigurationWithParams:(NSDictionary *)parameters;
 
 @end

@@ -30,7 +30,7 @@
 
 - (SKHTTPSessionManager *)httpSessionManagerInitWithParams:(NSDictionary *) params {
     if (!_httpSessionManager) {
-        _httpSessionManager = [[SKHTTPSessionManager new]initWithParams:params];
+        _httpSessionManager = [[SKHTTPSessionManager alloc]initWithParams:params];
     }
     return _httpSessionManager;
 }
