@@ -13,6 +13,7 @@
 #import "QJPaginatorPost.h"
 #import "QJNetworkClient.h"
 #import "NavUtils.h"
+#import "CourseList.h"
 
 @interface QJFeedsPageViewController () <QJFeedUserViewDelegate>
 @property(nonatomic) BOOL isRefreshed;
@@ -24,19 +25,19 @@
   if (self = [super init]) {
     [self createWithBuilder:^(SKTableViewControllerBuilder *builder) {
       builder.cellMetadata = @[[QJFeedsTableViewCell class]];
-      builder.modelOfClass = [QJPost class];
+      builder.modelOfClass = [CourseList class];
       builder.paginatorModelOfClass = [QJPaginatorPost class];
       builder.resultKeyValue = @"data";
-      @weakify(self);
-      builder.paginateBlock = ^(NSDictionary *parameters) {
-        @strongify(self)
-        NSMutableDictionary *params = [parameters mutableCopy];
-        //params[@"lat"] = @(1);
-        //params[@"lng"] = @(1);
-        params[@"conditionPara"] = @"-----20-1";
-        return [[self httpSessionManagerInitWithParams:[params copy]] fetchFeedsWithPagesNoParams];
-        //return [self.httpSessionManager fetchFeedsWithPages:[params copy]];
-      };
+//      @weakify(self);
+//      builder.paginateBlock = ^(NSDictionary *parameters) {
+//        @strongify(self)
+//        NSMutableDictionary *params = [parameters mutableCopy];
+//        //params[@"lat"] = @(1);
+//        //params[@"lng"] = @(1);
+//        params[@"conditionPara"] = @"-----20-1";
+//        //return [[self httpSessionManagerInitWithParams:[params copy]] fetchFeedsWithPagesNoParams];
+//        //return [self.httpSessionManager fetchFeedsWithPages:[params copy]];
+//      };
     }];
   }
   return self;

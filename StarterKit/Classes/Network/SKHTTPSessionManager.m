@@ -27,7 +27,7 @@
     NSLog(@"---initWithParams url %@",[NSURL URLWithString:[SKNetworkConfig sharedInstance].baseUrl]);
     if (self = [super initWithBaseURL:[NSURL URLWithString:[SKNetworkConfig sharedInstance].baseUrl]
                  sessionConfiguration:[[SKSessionConfiguration new] defaultSessionConfigurationWithParams:parameters]]) {
-        _params = parameters;
+        _params = [parameters mutableCopy];
     }
     
     return self;

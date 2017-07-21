@@ -259,6 +259,7 @@ static CGFloat const kIndicatorViewSize = 40.F;
 
 - (void)loadData {
   AnyPromise *promise = [self.paginator refresh];
+     NSLog(@"--load data api return.");
   if (promise) {
     @weakify(self);
     promise.then(^(id response) {

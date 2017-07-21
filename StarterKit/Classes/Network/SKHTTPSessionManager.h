@@ -7,7 +7,7 @@
 
 @interface SKHTTPSessionManager : OVCHTTPSessionManager
 
-@property (nonatomic, strong) NSDictionary *params;
+@property (nonatomic, copy) NSMutableDictionary *params;
 
 - (instancetype)init;
 

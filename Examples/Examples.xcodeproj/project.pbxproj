@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C258E171F208A1200E07D30 /* TeacherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C258E161F208A1200E07D30 /* TeacherInfo.m */; };
+		0C258E1A1F208EFE00E07D30 /* CourseListRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C258E191F208EFE00E07D30 /* CourseListRows.m */; };
+		0C258E1D1F2091C800E07D30 /* CourseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C258E1C1F2091C800E07D30 /* CourseList.m */; };
 		22B960254757262CC620386A /* QJNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B96B0673C11408F22F4108 /* QJNetworkClient.m */; };
 		22B960A039C9F44ED8392ADE /* QJView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B96E6D81BB6F21CA7165BE /* QJView.m */; };
 		22B960F8B66DB5EEA129B6B5 /* QJPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B966000B5924E036B1D5FF /* QJPost.m */; };
@@ -51,6 +54,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C258E151F208A1200E07D30 /* TeacherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherInfo.h; sourceTree = "<group>"; };
+		0C258E161F208A1200E07D30 /* TeacherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherInfo.m; sourceTree = "<group>"; };
+		0C258E181F208EFE00E07D30 /* CourseListRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseListRows.h; sourceTree = "<group>"; };
+		0C258E191F208EFE00E07D30 /* CourseListRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseListRows.m; sourceTree = "<group>"; };
+		0C258E1B1F2091C800E07D30 /* CourseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseList.h; sourceTree = "<group>"; };
+		0C258E1C1F2091C800E07D30 /* CourseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseList.m; sourceTree = "<group>"; };
 		22B960192A8B7051E3A60BA7 /* QJFeedsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJFeedsViewController.h; sourceTree = "<group>"; };
 		22B9601FD60F69DFF33A8BC0 /* QJPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJPost.h; sourceTree = "<group>"; };
 		22B96046BD6E6BB5DC0AFF24 /* QJMobileTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJMobileTextField.h; sourceTree = "<group>"; };
@@ -144,6 +153,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C258E141F20884F00E07D30 /* JXModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C258E151F208A1200E07D30 /* TeacherInfo.h */,
+				0C258E161F208A1200E07D30 /* TeacherInfo.m */,
+				0C258E181F208EFE00E07D30 /* CourseListRows.h */,
+				0C258E191F208EFE00E07D30 /* CourseListRows.m */,
+				0C258E1B1F2091C800E07D30 /* CourseList.h */,
+				0C258E1C1F2091C800E07D30 /* CourseList.m */,
+			);
+			path = JXModel;
+			sourceTree = "<group>";
+		};
 		22B9650ED90CDE78D5E0524E /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +357,7 @@
 		80670EDD8717CF8305AADDFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C258E141F20884F00E07D30 /* JXModel */,
 				22B9684A59BEAD15B6B32EF4 /* QJUser.m */,
 				22B96B7413EBAD5F3C0720FC /* QJUser.h */,
 				22B9673EAE97B5E2CDC9B28E /* QJCategory.m */,
@@ -548,6 +571,7 @@
 				5361ED221C4D38DB0048F4AC /* main.m in Sources */,
 				531838381C5233E700A38298 /* README.md in Sources */,
 				806701B66B5952E673C98EB2 /* AppDelegate.m in Sources */,
+				0C258E171F208A1200E07D30 /* TeacherInfo.m in Sources */,
 				22B96668959D09AED7F76F1C /* QJConfig.m in Sources */,
 				22B965E884EDF015D3F73E59 /* QJConstants.m in Sources */,
 				22B965DB481A13CA527A9996 /* QJFeedsTableViewCell.m in Sources */,
@@ -566,6 +590,7 @@
 				A8CEBAFD1DF7ED1D00D6B709 /* QJPaginatorPost.m in Sources */,
 				22B960F8B66DB5EEA129B6B5 /* QJPost.m in Sources */,
 				22B9645EA4437455C60858D6 /* QJFeedContentView.m in Sources */,
+				0C258E1D1F2091C800E07D30 /* CourseList.m in Sources */,
 				22B96E32423A4C186FC0B2A3 /* QJFeedPhotoView.m in Sources */,
 				22B961DFEFA5D7935CFCA288 /* QJFeedUserView.m in Sources */,
 				A8FF45911E9B889E00436911 /* QJPageListTableViewController.m in Sources */,
@@ -579,6 +604,7 @@
 				22B96210AED323B6B904E0B0 /* QJLoginThirdPartyView.m in Sources */,
 				A8FF45971E9B8D5000436911 /* QJPageListModel.m in Sources */,
 				22B96DF0EE8F165750CC73A6 /* QJLoginViewController.m in Sources */,
+				0C258E1A1F208EFE00E07D30 /* CourseListRows.m in Sources */,
 				22B969048CE054890E58A2D2 /* NavUtils.m in Sources */,
 				22B96C76E5998FA1953A1581 /* QJPageTableViewController.m in Sources */,
 			);

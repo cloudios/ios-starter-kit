@@ -11,7 +11,6 @@
 @property (copy, nonatomic) NSMutableArray *items;
 @property (copy, nonatomic) NSArray *localItems;
 @property(nonatomic, strong) SKHTTPSessionManager *httpSessionManager;
-//@property(nonatomic, strong) SKHTTPAdapterManager *httpAdapterManager;
 @end
 
 @implementation SKTableViewController

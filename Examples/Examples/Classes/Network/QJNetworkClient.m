@@ -7,29 +7,39 @@
 #import <StarterKit/SKPaginatorModel.h>
 #import "QJNetworkClient.h"
 #import "QJPost.h"
+#import <Overcoat/OVCResponse.h>
 
 @implementation SKHTTPSessionManager (NetworkClient)
 
 //- (AnyPromise *)fetchFeeds:(NSDictionary *)parameters {
 //  NSLog(@"--------------- fetchFeeds ");
-//  return [self pmk_GET:@"/site/courseLis" parameters:self.params];
+//  return [self pmk_GET:@"/site/courseList" parameters:self.params];
 //}
 //
 //- (AnyPromise *)fetchFeedsWithPages:(NSDictionary *)parameters {
 //  NSLog(@"--------------- fetchFeedsWithPages ");
-//  return [self pmk_POST:@"/site/courseLis" parameters:self.params];
+//  return [self pmk_POST:@"/site/courseList" parameters:self.params];
 //}
 
 
 
 - (AnyPromise *)fetchFeedsNoParams {
   NSLog(@"--------------- fetchFeeds ");
-  return [self pmk_GET:@"/site/courseLis" parameters: self.params];
+  
+  /*
+  return [self GET: @"/site/courseList" parameters: self.params].then(^(OVCResponse *response){
+    return response.result;
+  });
+   */
+  return [self pmk_GET:@"/site/courseList" parameters: self.params];
 }
 
 - (AnyPromise *)fetchFeedsWithPagesNoParams {
   NSLog(@"--------------- fetchFeedsWithPages ");
-  return [self pmk_POST:@"/site/courseLis" parameters:self.params];
+  [self GET:@"/site/courseList" parameters:self.params completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+    NSLog(@"--get data : %@", response.result);
+  }];
+  return [self pmk_POST:@"/site/courseList" parameters:self.params];
 }
 
 

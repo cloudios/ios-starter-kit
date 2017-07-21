@@ -21,7 +21,10 @@
 
 + (NSDictionary *)commonHeader {
   return @{
+      @"Content-Type"     : @"application/json;charset=utf-8",
+      @"Accept" : @"*/*",
       @"Content-Encoding" : @"gzip",
+      /*
       @"X-Client-Build" : [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"] ?: [[NSBundle mainBundle] infoDictionary][(__bridge NSString *) kCFBundleVersionKey],
       @"X-Client-Version" : [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] ?: [[NSBundle mainBundle] infoDictionary][(__bridge NSString *) kCFBundleVersionKey],
       @"X-Client" : [[[UIDevice currentDevice] identifierForVendor] UUIDString],
@@ -30,6 +33,7 @@
       @"X-Language-Code" : [SKLocalizableUtils getPreferredLanguagesString],
       @"X-Client-System" : [NSString stringWithFormat:@"%.1f", [[[UIDevice currentDevice] systemVersion] floatValue]],
       @"X-Client-Model" : [[UIDevice currentDevice] deviceModel],
+       */
       @"X-JXC-APPID" : @"APP_ID",
   };
 }
@@ -40,9 +44,9 @@
   NSMutableDictionary *mutableDictionary = [headers mutableCopy];
 
   if ([SKNetworkConfig sharedInstance].accept) {
-    mutableDictionary[@"Accept"] = [SKNetworkConfig sharedInstance].accept;
+    //mutableDictionary[@"Accept"] = [SKNetworkConfig sharedInstance].accept;
   }
-
+    
   SKAccountManager *manager = [SKAccountManager defaultAccountManager];
   if ([manager isLoggedIn]) {
       //JWTs
@@ -70,7 +74,7 @@
     NSMutableDictionary *mutableDictionary = [headers mutableCopy];
     
     if ([SKNetworkConfig sharedInstance].accept) {
-        mutableDictionary[@"Accept"] = [SKNetworkConfig sharedInstance].accept;
+        //mutableDictionary[@"Accept"] = [SKNetworkConfig sharedInstance].accept;
     }
     
     SKAccountManager *manager = [SKAccountManager defaultAccountManager];
@@ -90,6 +94,7 @@
         for(NSString *key in dataKeys){
             NSString *str = parameters[key];
             if(str != nil){
+                NSLog(@"---- params key:%@, str: %@",key,str);
                 [signStr appendFormat:@"%@", str];
             }
         }
